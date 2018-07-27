@@ -21,7 +21,6 @@ class CreateStudentTable extends Migration
             $table->date("dob");
             $table->integer("id_number");
             $table->boolean("status");
-            $table->dateTime("createdAt");
 
             $table->string("email");
             $table->string("mobile");

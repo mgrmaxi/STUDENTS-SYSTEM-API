@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Stage extends Model
+class _Class extends Model
 {
-    public function department()
+    public function stage()
     {
-        return $this->belongsTo('App\Department');
+        return $this->belongsTo('App\Stage');
     }
 
     public function students()
