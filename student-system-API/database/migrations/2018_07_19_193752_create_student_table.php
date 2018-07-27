@@ -15,6 +15,24 @@ class CreateStudentTable extends Migration
     {
         Schema::create('student', function (Blueprint $table) {
             $table->increments('id');
+            $table->string("f_name");
+            $table->string("m_name");
+            $table->string("l_name");
+            $table->date("dob");
+            $table->integer("id_number");
+            $table->boolean("status");
+            $table->dateTime("createdAt");
+
+            $table->string("email");
+            $table->string("mobile");
+            $table->string("image");
+            $table->string("attach");
+            $table->string("address");
+            $table->boolean("evening_study");
+
+            $table->integer('dep_id');//->references('id')->on('department');
+            $table->integer('class_id');
+            $table->integer('stage_id');
             $table->timestamps();
         });
     }
