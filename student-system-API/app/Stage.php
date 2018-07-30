@@ -11,6 +11,10 @@ class Stage extends Model
         return $this->belongsTo('App\Department');
     }
 
+    public function classroom()
+    {
+        return $this->hasMany('App\Classroom');
+    }
     public function students()
     {
         return $this->hasMany('App\Student');

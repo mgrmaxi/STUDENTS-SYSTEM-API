@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class _Class extends Model
+class Classroom extends Model
 {
     public function stage()
     {

@@ -22,5 +22,12 @@ Route::group(['middleware' => 'auth:api'], function(){
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
 //    return $request->user();
 //
+
+    Route::resource('students', 'API\StudentAPIController');
+    Route::resource('departments', 'API\DepartmentApiController');
+    Route::resource('classrooms', 'API\ClassroomApiController');
+    Route::resource('stages', 'API\StageApiController');
+
+
 }
 );
