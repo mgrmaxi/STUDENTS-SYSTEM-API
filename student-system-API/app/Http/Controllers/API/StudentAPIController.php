@@ -38,7 +38,16 @@ class StudentAPIController extends APIBaseController
 
 
         $validator = Validator::make($input, [
-            'f_name' => 'required',
+            'f_name'        => 'required',
+            'm_name'        => 'required',
+            'l_name'        => 'required',
+            'dob'           => 'required',
+            'id_number'     => 'required',
+            'status'        => 'required',
+            'email'         => 'required',
+            'mobile'        => 'required',
+            'address'       => 'required',
+            'evening_study' => 'required'
 
         ]);
 
@@ -81,7 +90,17 @@ class StudentAPIController extends APIBaseController
 
 
         $validator = Validator::make($input, [
-            'f_name' => 'required',
+
+            'f_name'        => 'required',
+            'm_name'        => 'required',
+            'l_name'        => 'required',
+            'dob'           => 'required',
+            'id_number'     => 'required',
+            'status'        => 'required',
+            'email'         => 'required',
+            'mobile'        => 'required',
+            'address'       => 'required',
+            'evening_study' => 'required'
 
         ]);
 
@@ -97,7 +116,16 @@ class StudentAPIController extends APIBaseController
         }
 
 
-        $student->name = $input['f_name'];
+        $student->f_name        = $input['f_name'];
+        $student->m_name        = $input['m_name'];
+        $student->l_name        = $input['l_name'];
+        $student->dob           = $input['dob'];
+        $student->id_number     = $input['id_number'];
+        $student->status        = $input['status'];
+        $student->email         = $input['email'];
+        $student->mobile        = $input['mobile'];
+        $student->address       = $input['address'];
+        $student->evening_study = $input['evening_study'];
 
         $student->save();
 

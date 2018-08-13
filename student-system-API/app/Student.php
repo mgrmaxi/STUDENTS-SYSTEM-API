@@ -9,8 +9,8 @@ class Student extends Model
 
     protected $fillable = [
         'f_name', 'm_name', 'l_name','dob', 'id_number', 'status',
-        'email', 'mobile' ,'image', 'attach', 'address', 'evening_study'
-    ];
+        'email', 'mobile' ,'image', 'attach', 'address', 'evening_study',
+        'department_id', 'classroom_id','stage_id'    ];
 
 
 
@@ -29,6 +29,6 @@ class Student extends Model
 
     public function Class()
     {
-        return $this->belongsTo('App\_Classroom');
+        return $this->belongsTo('App\Classroom');
     }
 }
